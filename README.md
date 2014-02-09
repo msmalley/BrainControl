@@ -1,7 +1,7 @@
 # Welcome to BrainControl
 ### Storing and Sending Bitcoin from Your Brain!
 
-BrainControl is a 100% Browser-Based Bitcoin Wallet.
+BrainControl is a 100% Browser-Based Bitcoin Wallet - [see live demo](http://braincontrol.me)
 
 It requires a browser with HTML5 LocalStorage functionality, and uses inline
 JavaScript to generate and manage non-existent private keys using deterministic
