@@ -8,11 +8,6 @@ Please visit our [technical blog post](http://betanomics.asia/blog/store-and-sen
 to the bottom of the page.
 
 
-#### BEFORE LAUNCH
-
-* Test wallets with multiple ins
-
-
 #### AFTER LAUNCH
 
 * Better Documentation
@@ -22,14 +17,12 @@ to the bottom of the page.
 
 #### WITH FUNDING OR SUPPORT
 
--- NOT ADDED TO BOUNTY YET --
+* Do not include unnecessary inputs in rawtransaction
 * Improve WordPress Theme
 * Consolidate Core
 * Fonts on Desktop
 * Tested FirefoxOS Photos / QR Scan?
 * Import / Export Options (for TOR)
--- END OF NEW BOUNTIES --
-
 * Plugin Functionality
 * Theme Functionality
 * Make bootstrap / bootbox compatible / rewrite CSS / JS UIX...?
