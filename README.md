@@ -16,6 +16,12 @@ This repository contains several components, including:
 * [MacOSX Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-macosx/)
 * [Windows Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-windows/)
 
+Download compiled ZIP files for the following platforms:
+
+* WordPress [downloads/bc-wordpress.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-wordpress.zip)
+* Windows [downloads/bc-windows.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-windows.zip)
+* MacOSX [downloads/bc-macosx.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-macosx.zip)
+
 Learn more at [BrainControl.me](http://braincontrol.me) or for a more technical
 look behind the scenes and at what is to come, please see [this blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol)
 
