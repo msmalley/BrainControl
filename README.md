@@ -10,11 +10,11 @@ actually storing your Bitcoin anywhere other than in your brain.
 
 This repository contains several components, including:
 
-* [STATIC HTML Version](https://github.com/msmalley/BrainControl/html/)
-* [FirefoxOS Application](https://github.com/msmalley/BrainControl/bc-firefox/)
-* [WordPress Theme](https://github.com/msmalley/BrainControl/bc-wordpress)
-* [MacOSX Desktop Application](https://github.com/msmalley/BrainControl/bc-macosx/)
-* [Windows Desktop Application](https://github.com/msmalley/BrainControl/bc-windows/)
+* [STATIC HTML Version](https://github.com/msmalley/BrainControl/tree/master/html/)
+* [FirefoxOS Application](https://github.com/msmalley/BrainControl/tree/master/bc-firefox/)
+* [WordPress Theme](https://github.com/msmalley/BrainControl/tree/master/bc-wordpress)
+* [MacOSX Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-macosx/)
+* [Windows Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-windows/)
 
 Learn more at [BrainControl.me](http://braincontrol.me) or for a more technical
 look behind the scenes and at what is to come, please see [this blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol)
