@@ -16,7 +16,7 @@ This repository contains several components, including:
 * [MacOSX Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-macosx/)
 * [Windows Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-windows/)
 
-Download compiled ZIP files for the following platforms:
+Downloads compiled as ZIP files for the following platforms:
 
 * WordPress - [downloads/bc-wordpress.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-wordpress.zip)
 * Windows - [downloads/bc-windows.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-windows.zip)
