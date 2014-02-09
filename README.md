@@ -27,7 +27,7 @@ For a more technical look behind the scenes and at what is to come, please see t
 
 Follow us on [Twitter](http://twitter.com/braincontrolme) for more updates.
 
-Please view [todo.md](https://github.com/msmalley/BrainControl/master/tree/todo.md) for a full break-down of what is left to be done...
+Please view [todo.md](https://github.com/msmalley/BrainControl/tree/master/todo.md) for a full break-down of what is left to be done...
 
 #### Current JS Dependencies (Not Mine but Included)
 
