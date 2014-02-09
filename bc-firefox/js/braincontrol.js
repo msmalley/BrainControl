@@ -458,3 +458,8 @@ braincontrol = new function(options){
 		}
 	}
 }
+
+$(window).load(function(e)
+{
+	braincontrol.init();
+});
