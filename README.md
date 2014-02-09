@@ -25,7 +25,7 @@ Downloads compiled as ZIP files for the following platforms:
 For a more technical look behind the scenes and at what is to come, please see this
 [blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).
 
-Follow us on [Twitter](http://twitter.com/braincontrolme) for more updates.
+Follow us on [Twitter](http://twitter.com/braincontrolme) or [Facebook](https://www.facebook.com/groups/braincontrolme/) for more updates / support.
 
 Please view [todo.md](https://github.com/msmalley/BrainControl/tree/master/todo.md) for a full break-down of what is left to be done...
 
