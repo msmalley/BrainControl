@@ -1,0 +1,130 @@
+#braincontrol-holder {
+	display: block;
+	position: absolute;
+	background: #333;
+	color: #EEE;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#braincontrol .bc-panel {
+	display: block;
+	position: absolute;
+	text-align: center;
+	background: #FFFFCC;
+	color: #666;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	right: 0;
+}
+#braincontrol .bc-panel.top {
+	top: -150%;
+	right: auto;
+	bottom: auto;
+	left: auto;
+}
+#braincontrol .bc-panel.right {
+	right: -150%;
+	bottom: auto;
+	left: auto;
+	top: auto;
+}
+#braincontrol .bc-panel.bottom {
+	bottom: -150%;
+	left: auto;
+	top: auto;
+	right: auto;
+}
+#braincontrol .bc-panel.left {
+	left: -150%;
+	top: auto;
+	right: auto;
+	bottom: auto;
+}
+#braincontrol .bc-panel.top.active {
+	top: 0;
+}
+#braincontrol .bc-panel.right.active {
+	right: 0;
+}
+#braincontrol .bc-panel.bottom.active {
+	bottom: 0;
+}
+#braincontrol .bc-panel.left.active {
+	left: 0;
+}
+
+#braincontrol .bc-panel .step-top {
+	display: block;
+	width: 90%;
+	position: relative;
+	padding: 15px 5%;
+	border-bottom: 1px dotted #CCC;
+}
+#braincontrol .bc-panel .step-middle {
+	display: table-cell;
+	width: 90%;
+	vertical-align: middle;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align: center;
+	position: relative;
+	padding: 5px 5%;
+}
+#braincontrol .bc-panel .step-bottom {
+	display: block;
+	position: relative;
+	width: 90%;
+	padding: 15px 5%;
+	bottom: 0;
+	border-top: 1px dotted #CCC;
+}
+#braincontrol .bc-panel .step-bottom p:last-child {
+	margin-bottom: 0;
+}
+#braincontrol .bc-panel .step-top .bc-warn:last-child {
+	margin-bottom: 0;
+}
+
+/*
+
+HEADERS
+
+*/
+#braincontrol .fancy-title {
+	font-family: exo, sans-serif;
+	text-transform: uppercase;
+	position: relative;
+	text-align: left;
+	font-weight: normal;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+}
+#braincontrol .fancy-title span {
+	color: #09C;
+}
+#braincontrol .fancy-title a.fa {
+	display: block;
+	position: absolute;
+	font-size: 20px;
+	top: -2px;
+	right: 0;
+	color: #757575;
+	width: 30px;
+	line-height: 25px;
+}
+#braincontrol .fancy-title a.fa.fa-print {
+	right: 30px;
+	color: #09C;
+}

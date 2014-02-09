@@ -1,0 +1,16 @@
+<div class="account bc-via-ajax" id="account-{{username}}">
+
+	<h4 class="label">
+		{{label}}
+		<span class="currency"><span class="btc" data-address="{{address}}" data-username="{{username}}">{{btc}}</span> BTC</span>
+	</h4>
+
+	<input type="text" class="fake-input" value="{{address}}" onkeydown="event.preventDefault();event.stopPropagation();return false;" oncut="event.preventDefault();event.stopPropagation();return false;" />
+	
+	<div class="actions">
+		<a href="#" class="bc-button bc-action bc-small bc-account-backup" data-address="{{address}}" data-username="{{username}}">{{button_backup}}</a>
+		<a href="#" class="bc-button bc-danger bc-small bc-account-clear" data-address="{{address}}" data-username="{{username}}">{{button_clear}}</a>
+		<a href="#" class="bc-button bc-primary bc-small bc-account-qr bc-slide" data-direction="down" data-id="step-qr-accounts" data-address="{{address}}">{{button_qr}}</a>
+	</div>
+
+</div>

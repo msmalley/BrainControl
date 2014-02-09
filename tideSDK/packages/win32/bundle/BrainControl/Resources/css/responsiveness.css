@@ -1,0 +1,95 @@
+/*
+
+RESPONSIVENESS
+
+MOBILE FIRST
+
+*/
+
+/* DEALING WITH HEIGHT THROUGH CSS */
+@media (min-height: 1px) and (max-height: 440px) {
+	#braincontrol #step-qr-accounts .step-middle .bc-action,
+	#braincontrol #step-qr-backups .step-middle .bc-action,
+	#braincontrol #step-qr-contacts .step-middle .bc-action {
+		display: none;
+	}
+	#braincontrol .fancy-title .fa.fa-print {
+		display: block;
+	}
+}
+@media (min-height: 441px) {
+	#braincontrol #step-qr-accounts .step-middle .bc-action,
+	#braincontrol #step-qr-backups .step-middle .bc-action,
+	#braincontrol #step-qr-contacts .step-middle .bc-action {
+		display: inline-block;
+		top: -25px;
+	}
+	#braincontrol .fancy-title .fa.fa-print {
+		display: none;
+	}
+}
+
+/* SAFARI IOS SPECIFIC HEIGHT HACK */
+@media only_screen and (min-device-height: 1px) and (max-device-height: 440px) {
+	#braincontrol #step-qr-accounts .step-middle .bc-action,
+	#braincontrol #step-qr-backups .step-middle .bc-action,
+	#braincontrol #step-qr-contacts .step-middle .bc-action {
+		display: none;
+	}
+	#braincontrol .fancy-title .fa.fa-print {
+		display: block;
+	}
+}
+@media only_screen and (min-device-height: 441px) {
+	#braincontrol #step-qr-accounts .step-middle .bc-action,
+	#braincontrol #step-qr-backups .step-middle .bc-action,
+	#braincontrol #step-qr-contacts .step-middle .bc-action {
+		display: inline-block;
+		top: -25px;
+	}
+	#braincontrol .fancy-title .fa.fa-print {
+		display: none;
+	}
+}
+
+
+/* Medium devices (desktops, 376px and up) */
+@media (min-width: 320px) and (max-width: 767px) {
+	#braincontrol #step-qr-accounts .qr_code_title,
+	#braincontrol #step-qr-backups .qr_code_title,
+	#braincontrol #step-qr-contacts .qr_code_title {
+		max-width: 280px;
+	}
+}
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+	#braincontrol .bc-panel,
+	#braincontrol .page {
+		width: 60% !important;
+		padding: 0 20% !important;
+	}
+	#braincontrol-holder #page-markets .stat .figure {
+		font-size: 30px;
+	}
+	#braincontrol-holder #page-markets .stat .fact {
+		font-size: 12px;
+	}
+	#braincontrol #step-qr-accounts .qr_code_title,
+	#braincontrol #step-qr-backups .qr_code_title,
+	#braincontrol #step-qr-contacts .qr_code_title {
+		max-width: auto;
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#braincontrol .bc-panel,
+	#braincontrol .page {
+		width: 50% !important;
+		padding: 0 25% !important;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

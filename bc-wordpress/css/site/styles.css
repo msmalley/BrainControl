@@ -1,0 +1,490 @@
+/*
+
+FONTS
+
+*/
+@font-face {
+	font-family: dev;
+	src:	url('../../fonts/dev.eot'); /* IE */
+	src:	local('dev'),
+			url('../../fonts/dev.ttf'); /* non-IE */
+}
+@font-face {
+	font-family: lobster;
+	src:	url('../../fonts/lobster.eot'); /* IE */
+	src:	local('Lobster'),
+			url('../../fonts/lobster.otf'); /* non-IE */
+}
+.dev {
+	font-family: dev, sans-serif;
+	text-transform: uppercase;
+}
+.lobster {
+	font-family: lobster, sans-serif;
+}
+
+/*
+
+RESETS
+
+*/
+html, body {
+	background: #FFFF9C;
+	display: block;
+	position: absolute;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+.container {
+	position: relative;
+}
+a {
+	color: #0099CC;
+	text-decoration: none;
+}
+a:hover {
+	color: #757575;
+	text-decoration: none;
+}
+.loading {
+	color: transparent !important;
+	background: #EEE url(../../img/site/loading.gif) no-repeat center center !important;
+	text-shadow: none;
+	cursor: wait;
+}
+.btn.btn-info,
+#warning .btn.btn-info {
+	color: #FFF;
+	background: #09C;
+}
+#warning .btn.btn-info:hover {
+	opacity: 0.7;
+}
+#bc-standalone {
+	display: block;
+	position: absolute;
+	width: 140px;
+	top: 150px;
+	right: 222px;
+	z-index: 99999;
+	background: #222;
+	border-color: #000;
+	color: #DDD;
+}
+#bc-standalone:hover {
+	color: #FFFFEE;
+	border-color: #222;
+	background: #000;
+}
+/*
+
+HEADER
+
+*/
+#header-bg {
+	display: block;
+	position: relative;
+	height: 200px;
+	z-index: 4;
+	border-bottom: 2px solid #999;
+	background: url(../../img/site/header-bg.jpg) repeat-x;
+}
+#header {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 200px;
+	z-index: 99;
+}
+#naked-logo,
+#logo {
+	display: block;
+	width: 100%;
+	height: 200px;
+	background-position: left 20px;
+	background-repeat: no-repeat;
+	text-indent: -999em;
+}
+#naked-logo {
+	text-indent: 0;
+	text-align: left;
+	padding: 0;
+	font-size: 40px;
+	font-family: dev;
+}
+#header-meta {
+	text-align: center;
+}
+#header-meta h4 {
+	font-size: 30px;
+	color: #666;
+}
+#header-meta p {
+	color: #999;
+}
+nav.navbar {
+	position: relative;
+	z-index: 9999;
+	background: transparent;
+	border: none;
+	margin: 20px 0 0 0;
+}
+nav.navbar ul.navbar-nav li {
+	display: inline-block;
+	float: none;
+}
+nav.navbar ul.nav li a {
+	font-size: 20px;
+	font-family: dev;
+	padding: 4px 12px;
+	border: 1px solid #777;
+	border-radius: 8px;
+	outline: 0;
+	margin: 0 6px 0 0;
+	color: #666;
+	box-shadow: 1px 1px 2px #AAA;
+}
+nav.navbar ul.nav li a:hover {
+	box-shadow: 1px 1px 2px #666;
+}
+nav.navbar ul.nav {
+	margin-top: -130px;
+}
+nav.navbar ul.nav li.current_page_item a,
+nav.navbar ul.nav li.active a {
+	color: #0099CC;
+}
+
+/*
+
+CONTENT
+
+*/
+#parallax-wrapper {
+	background-color: #333;
+}
+#parallax-wrapper,
+#main-content {
+	display: block;
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	height: 700px;
+	border-top: 2px solid #FFF;
+	border-bottom: 2px solid #FFF;
+	overflow: hidden;
+	z-index: 1;
+	background-size: cover;
+}
+#parallax-layer-01 {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 2000px;
+	min-height: 150%;
+	z-index: 2;
+	background: url(../../img/site/bg-layer1-default.jpg) no-repeat;
+	background-size: cover;
+}
+#parallax-layer-01.blue {
+	background-image: url(../../img/site/bg-layer1-blue.jpg);
+}
+#parallax-layer-01.green {
+	background-image: url(../../img/site/bg-layer1-green.jpg);
+}
+#parallax-layer-01.red {
+	background-image: url(../../img/site/bg-layer1-red.jpg);
+}
+#parallax-layer-01.yellow {
+	background-image: url(../../img/site/bg-layer1-yellow.jpg);
+}
+#parallax-layer-01.purple {
+	background-image: url(../../img/site/bg-layer1-purple.jpg);
+}
+#parallax-layer-02 {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 150%;
+	height: 800px;
+	min-height: 120%;
+	z-index: 3;
+	opacity: 0.1;
+	background: url(../../img/site/bg-layer2.jpg) no-repeat;
+	background-size: cover;
+}
+#main-content {
+	z-index: 4;
+	overflow: visible;
+}
+#hand {
+	display: block;
+	position: absolute;
+	top: -99px;
+	right: 0;
+	width: 760px;
+	height: 795px;
+	z-index: 99;
+	background: url(../../img/site/hand.png) no-repeat;
+}
+.hand-holder {
+	position: absolute;
+	top: 30px;
+	right: 82px;
+	display: none;
+	z-index: 9999;
+}
+.hand-holder.active {
+	display: block;
+}
+#main-content #braincontrol,
+iframe.hand-holder.active {
+	height: 488px;
+	width: 323px;
+	border: none;
+	overflow: hidden;
+	position: absolute;
+	top: 30px;
+	right: 130px;
+	z-index: 99999;
+}
+#strip-bg {
+	display: block;
+	position: relative;
+	height: 370px;
+	background: #0099CC;
+	margin: -3px 0 0 0;
+	z-index: 5;
+	opacity: 0.5;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	box-shadow: 1px 2px 3px #000;
+}
+#strip-inner {
+	display: block;
+	position: absolute;
+	height: 363px;
+	width: 100%;
+	top: 0;
+	z-index: 6;
+	padding: 20px 0;
+	overflow: hidden;
+	color: #FFF;
+	border-top: 2px solid #EEE;
+	border-bottom: 2px solid #CCC;
+}
+#strip {
+	display: block;
+	position: absolute;
+	height: 363px;
+	width: 100%;
+	top: 0;
+	z-index: 9;
+	padding: 20px 0;
+	overflow: hidden;
+	color: #FFF;
+}
+#strip-wrapper {
+	display: block;
+	position: absolute;
+	height: 363px;
+	width: 100%;
+	top: 93px;
+}
+#spokeperson {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 163px;
+	height: 178px;
+}
+.spoke-wrapper {
+	display: none;
+}
+.spoke-wrapper.active {
+	display: block;
+}
+#testimony {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 325px;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 10px 0 0 10px;
+}
+#testimony a,
+#warning a {
+	font-weight: bold;
+	color: #FFFF66;
+}
+#warning h2.dev {
+	color: #FFFF79;
+	font-size: 30px;
+}
+#testimony a:hover {
+	font-weight: bold;
+	color: #FFF;
+}
+#testimony p.name {
+	border-top: 1px dotted #CCC;
+	height: 40px;
+	margin: 0 0 0 2px;
+	background-repeat: no-repeat;
+	background-position: 0 15px;
+	text-indent: -999em;
+}
+#testimony p.title {
+	opacity: 0.7;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+#warning {
+	display: block;
+	position: relative;
+	width: 405px;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 0 0 0 0;
+}
+#braincontrol {
+	display: block;
+	position: absolute;
+	top: 129px;
+	right: 127px;
+	height: 490px;
+	width: 330px;
+	border: none;
+	overflow: hidden;
+	background: transparent;
+}
+#updates {
+	display: block;
+	position: absolute;
+	width: 300px;
+	height: 85px;
+	bottom: 75px;
+	right: 145px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#updates ul.social,
+#updates ul.social li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#updates ul.social li {
+	display: inline-block;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	margin: 5px 5px 0 0;
+}
+#updates ul.social li a {
+	display: block;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	text-indent: -999em;
+	opacity: 0.5;
+	background: url(../../img/site/icons.png) no-repeat;
+}
+#updates ul.social li.facebook a {
+	background-position: -50px 0;
+}
+#updates ul.social li.rss a {
+	background-position: -100px 0;
+}
+#updates ul.social li.email a {
+	background-position: -150px 0;
+}
+#updates ul.social li a:hover {
+	opacity: 1;
+}
+
+/*
+
+FOOTER
+
+*/
+#footer {
+	display: block;
+	position: relative;
+	height: 90px;
+	border-top: 2px solid #999;
+	margin-top: 700px;
+	background: #FFFF9C;
+	z-index: 9999999;
+}
+#footer p {
+	color: #666;
+	text-align: center;
+	font-size: 11px;
+	padding: 25px 0 15px;
+}
+
+#donation-section p {
+	font-size: 14px;
+	line-height: 18px;
+}
+#donation-section .lobster {
+	font-size: 40px;
+	color: #09C;
+	text-align: center;
+	margin-bottom: 0;
+	padding-top: 150px;
+	margin-top: 120px;
+	border-top: 1px dotted #CCC;
+}
+
+/*
+
+GRADIENTS
+
+*/
+ul.nav li a {
+	background: #ffffcc;
+	background: -moz-linear-gradient(top, #ffffcc 0%, #ffff33 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(100%,#ffff33));
+	background: -webkit-linear-gradient(top, #ffffcc 0%,#ffff33 100%);
+	background: -o-linear-gradient(top, #ffffcc 0%,#ffff33 100%);
+	background: -ms-linear-gradient(top, #ffffcc 0%,#ffff33 100%);
+	background: linear-gradient(to bottom, #ffffcc 0%,#ffff33 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#ffff33',GradientType=0 );
+}
+ul.nav li a:hover {
+	background: #ffff33;
+	background: -moz-linear-gradient(top, #ffff33 0%, #ffffcc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff33), color-stop(100%,#ffffcc));
+	background: -webkit-linear-gradient(top, #ffff33 0%,#ffffcc 100%);
+	background: -o-linear-gradient(top, #ffff33 0%,#ffffcc 100%);
+	background: -ms-linear-gradient(top, #ffff33 0%,#ffffcc 100%);
+	background: linear-gradient(to bottom, #ffff33 0%,#ffffcc 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff33', endColorstr='#ffffcc',GradientType=0 );
+}
+ul.nav li.current_page_item a,
+ul.nav li.active a {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#eeeeee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+}
+ul.nav li.current_page_item a:hover,
+ul.nav li.active a:hover {
+	background: #eeeeee;
+	background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+	background: -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+	background: linear-gradient(to bottom, #eeeeee 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+}

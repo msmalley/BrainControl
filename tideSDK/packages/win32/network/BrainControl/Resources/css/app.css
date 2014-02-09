@@ -1,0 +1,786 @@
+/*
+
+HEADERS
+
+*/
+#braincontrol-holder #header {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	overflow: hidden;
+	background: #FFFFCC;
+	border-bottom: 2px solid #000;
+	z-index: 999999;
+	vertical-align: top;
+}
+#braincontrol-holder #navigation {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 56px;
+	background: #FFFFCC;
+	overflow: hidden;
+	border-top: 2px solid #000;
+	z-index: 999999;
+}
+#braincontrol-holder #header h1 {
+	font-family: exo, sans-serif;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: #666;
+	font-size: 22px;
+	line-height: 36px;
+	text-align: center;
+	z-index: 999;
+	padding: 0;
+	margin: 0;
+}
+#braincontrol-holder #header h1 span {
+	color: #09C;
+}
+#braincontrol #braincontrol-holder #header a.bc-slide {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 50px;
+	z-index: 9999;
+	border-left: 1px dotted #CCC;
+}
+#braincontrol #braincontrol-holder #header a.bc-slide:first-child {
+	border-left: none;
+	border-right: 1px dotted #CCC;
+	right: auto;
+	left: 0;
+}
+#braincontrol-holder #header a.bc-slide i.fa {
+	display: block;
+	width: 20px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 22px;
+	line-height: 36px;
+	color: #999;
+}
+#braincontrol-holder #header a.bc-slide:first-child i.fa {
+	right: auto;
+	left: 10px;
+}
+#braincontrol #braincontrol-holder #header i.fa {
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background: url(../img/icons.png) no-repeat;
+	background-position: 0 0;
+}
+#braincontrol #braincontrol-holder #header i.fa.fa-bc-calculator {
+	background-position: 0 0;
+	left: 13px;
+	top: 7px;
+}
+#braincontrol #braincontrol-holder #header i.fa.fa-bc-profile {
+	background-position: -50px 0;
+	right: 11px;
+	top: 7px;
+}
+#braincontrol #braincontrol-holder #header a.bc-slide.active,
+#braincontrol #braincontrol-holder #header a.bc-slide:hover {
+	background: #09C;
+}
+#braincontrol #braincontrol-holder #header i.fa.fa-bc-calculator:hover,
+#braincontrol #braincontrol-holder #header a.active i.fa.fa-bc-calculator,
+#braincontrol #braincontrol-holder #header a:hover i.fa.fa-bc-calculator {
+	background-position: 0 -50px;
+}
+#braincontrol #braincontrol-holder #header i.fa.fa-bc-profile:hover,
+#braincontrol #braincontrol-holder #header a.active i.fa.fa-bc-profile,
+#braincontrol #braincontrol-holder #header a:hover i.fa.fa-bc-profile {
+	background-position: -50px -50px;
+}
+
+/*
+
+NAVIGATION
+
+*/
+#braincontrol-holder nav#navigation a {
+	display: inline-block;
+	position: relative;
+	width: 25%;
+	text-align: center;
+	color: #666;
+	font-size: 11px;
+	margin: 0 0 0 -3px;
+	padding: 0;
+	height: 56px;
+	line-height: 30px;
+	border-left: 1px dotted #CCC;
+	text-transform: uppercase;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+#braincontrol-holder nav#navigation a.active {
+	color: #FFF;
+	background: #09C;
+}
+#braincontrol-holder nav#navigation a:hover {
+	color: #FFFF97;
+	background: #069;
+}
+#braincontrol-holder nav#navigation a:first-child {
+	border-left: none;
+}
+#braincontrol-holder nav#navigation a i.fa,
+#braincontrol form.bc-form .form-group a.icon-wrapper i.fa {
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background: url(../img/icons.png) no-repeat;
+	background-position: 0 0;
+	left: 50%;
+	margin: 8px 0 0 -11px;
+}
+#braincontrol form.bc-form .form-group a.icon-wrapper i.fa {
+	left: auto;
+	right: 4%;
+	z-index: 9999999;
+	top: 1px;
+	opacity: 0.8;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-markets {
+	background-position: -100px 0;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-accounts {
+	background-position: -150px 0;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-send {
+	background-position: -201px 0;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-request {
+	background-position: -250px 0;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-contacts {
+	background-position: -300px 0;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-user {
+	background-position: -350px 0;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-markets:hover,
+#braincontrol-holder nav#navigation a.active i.fa.fa-bc-markets,
+#braincontrol-holder nav#navigation a:hover i.fa.fa-bc-markets {
+	background-position: -100px -50px;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-accounts:hover,
+#braincontrol-holder nav#navigation a.active i.fa.fa-bc-accounts,
+#braincontrol-holder nav#navigation a:hover i.fa.fa-bc-accounts {
+	background-position: -150px -50px;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-send:hover,
+#braincontrol-holder nav#navigation a.active i.fa.fa-bc-send,
+#braincontrol-holder nav#navigation a:hover i.fa.fa-bc-send {
+	background-position: -201px -50px;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-request:hover,
+#braincontrol-holder nav#navigation a.active i.fa.fa-bc-request,
+#braincontrol-holder nav#navigation a:hover i.fa.fa-bc-request {
+	background-position: -250px -50px;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-contacts:hover,
+#braincontrol-holder nav#navigation a.active i.fa.fa-bc-contacts,
+#braincontrol-holder nav#navigation a:hover i.fa.fa-bc-contacts {
+	background-position: -300px -50px;
+}
+#braincontrol-holder nav#navigation a i.fa.fa-bc-user:hover,
+#braincontrol-holder nav#navigation a.active i.fa.fa-bc-user,
+#braincontrol form.bc-form .form-group a.icon-wrapper i.fa.fa-bc-user,
+#braincontrol-holder nav#navigation a:hover i.fa.fa-bc-user {
+	background-position: -350px -50px;
+}
+#braincontrol form.bc-form .form-group a.icon-wrapper:hover i.fa.fa-bc-user {
+	opacity: 0.6;
+}
+
+/*
+
+FORMS
+
+*/
+#braincontrol form.bc-form .form-group {
+	display: block;
+	position: relative;
+	padding: 0 0 15px;
+}
+#braincontrol form.bc-form .form-group:first-child {
+	padding-top: 15px;
+}
+#braincontrol form.bc-form label {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	text-align: left;
+	width: 38%;
+	font-size: 12px;
+	line-height: 31px;
+	background: #FFFF76;
+	border: 1px solid #CCC;
+	border-radius: 6px 0 0 6px;
+	padding: 5px 0 5px 10px;
+	margin: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+#braincontrol form.bc-form select,
+#braincontrol form.bc-form textarea,
+#braincontrol form.bc-form input {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	font-size: 12px;
+	height: 43px;
+	color: #666;
+	background: #FFF;
+	-webkit-appearance:none;
+	border: 1px solid #CCC;
+	border-radius: 0 6px 6px 0;
+	text-align: left;
+	z-index: 99;
+	width: 60%;
+	padding: 6px 0 6px 15px;
+	margin: 0 0 0 -5px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+#braincontrol form.bc-form select {
+	padding: 9px;
+}
+#braincontrol form.bc-form textarea {
+	border-radius: 0 0 6px 6px;
+	width: 98%;
+	height: 120px;
+	margin: -1px 0 0 0;
+}
+#braincontrol #step-note form.bc-form textarea {
+	height: 75px;
+}
+#braincontrol form.bc-form label.full {
+	width: 98%;
+	border-radius: 6px 6px 0 0;
+}
+#braincontrol form.bc-form input.label-less {
+	width: 100%;
+	border-radius: 6px;
+}
+#braincontrol ul.keypad,
+#braincontrol ul.keypad li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#braincontrol ul.keypad li {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 30%;
+	margin: 1%
+}
+#braincontrol ul.keypad.calculator li {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 21%;
+	margin: 1%
+}
+#braincontrol ul.keypad li.blank {
+	opacity: 0;
+}
+#braincontrol ul.keypad li.enter a {
+	background-color: #EEE;
+}
+#braincontrol ul.keypad li a {
+	display: block;
+	position: relative;
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	background: #FFFF79;
+	border: 1px solid #CCC;
+	border-radius: 6px;
+}
+#braincontrol ul.keypad li a:hover {
+	background: #FFFFCC;
+	color: #757575;
+}
+#braincontrol ul.keypad {
+	margin-left: -2%;
+}
+#braincontrol ul.keypad li.info a {
+	background: #09C;
+	color: #FFF;
+}
+#braincontrol ul.keypad li.info a:hover {
+	background: #333;
+	color: #FFFFCC;;
+}
+#braincontrol input#usd-to-btc {
+	text-align: center;
+}
+#braincontrol-holder #page-send p {
+	display: block;
+	position: relative;
+	margin: 10px 0;
+	padding: 0 0 10px;
+	text-align: center;
+	border-bottom: 1px dotted #000;
+}
+#braincontrol-holder #page-send label {
+	background: #555;
+	border-color: #000;
+	color: #FFF;
+}
+#braincontrol #braincontrol-holder #page-send form.bc-form .form-group {
+	padding: 0 0 10px;
+}
+#braincontrol-holder #page-send select,
+#braincontrol-holder #page-send input[type="text"] {
+	background: #222;
+	-webkit-appearance:none;
+	border-color: #000;
+	color: #FFFF79;
+}
+#braincontrol-holder #page-send form#send-payment {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: -165px 0 0 0;
+	top: 50%;
+	left:1%;
+}
+
+/*
+
+PAGES
+
+*/
+#braincontrol #pages {
+	display: block;
+	position: absolute;
+	top: 42px;
+	left: 0;
+	bottom: 58px;
+	right: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#braincontrol #pages .page {
+	display: block;
+	padding: 0 3%;
+	position: absolute;
+	background: #333;
+	width: 94%;
+	right: -150%;
+	overflow: hidden;
+	min-height: 100%;
+}
+#braincontrol #pages #page-markets {
+	bottom: 0;
+	top: 0;
+}
+#braincontrol #pages .page.active {
+	right: 0;
+}
+#braincontrol #pages #page-accounts.active,
+#braincontrol #pages #page-contacts.active {
+	height: auto !important;
+}
+#braincontrol #page-accounts .account,
+#braincontrol #page-contacts .contact {
+	display: block;
+	position: relative;
+	background: #444;
+	border: 1px solid #000;
+	padding: 20px 30px;
+	text-align: center;
+	margin: 10px 0 0;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px #222;
+}
+#braincontrol #page-accounts .account.bc-via-ajax {
+	display: none;
+}
+#braincontrol #page-accounts .account h4,
+#braincontrol #page-contacts .contact h4 {
+	padding-top: 0;
+	margin-left: -10px;
+	height: 28px;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 5px;
+	font-size: 15px;
+	text-align: left;
+	color: #FFFF79;
+}
+#braincontrol #page-contacts .contact h4 {
+	text-align: center;
+	color: #FFF;
+}
+#braincontrol #page-contacts .contact h4.with-notes {
+	text-align: left;
+	color: #FFF;
+}
+#braincontrol #page-contacts .contact h4 a.bc-contact-notes,
+#braincontrol #page-accounts .account h4 span.currency {
+	float: right;
+	margin-right: -10px;
+}
+#braincontrol #page-contacts .contact h4 a.bc-contact-notes {
+	border-bottom: 1px dotted #EEE;
+}
+#braincontrol #page-accounts .account h4 a.bc-small,
+#braincontrol #page-contacts .contact h4 a.bc-small {
+	float: right;
+	margin: -5px -10px 0 20px;
+}
+#braincontrol #page-accounts .account .fake-input,
+#braincontrol #page-contacts .contact .fake-input {
+	display: block;
+	position: relative;
+	/*font-size: 12px !important;*/
+	text-align: center;
+	border: 1px solid #AAA;
+	border-radius: 6px;
+	background: #000;
+	color: #FFFFEE;
+	width: 100%;
+	margin: 10px 0 10px -10px;
+	padding: 10px;
+	line-height: 28px;
+}
+#braincontrol #page-accounts .account .actions,
+#braincontrol #page-contacts .contact .actions {
+	display: block;
+	position: relative;
+	padding: 5px 0;
+	width: 102%;
+	margin-left: -1%;
+}
+#braincontrol #page-accounts .account a.bc-button,
+#braincontrol #page-send input.bc-button,
+#braincontrol #page-contacts .contact a.bc-button {
+	border-color: #333;
+	box-shadow: 1px 1px 2px #111;
+}
+#braincontrol #page-accounts .account a.bc-button:hover,
+#braincontrol #page-contacts .contact a.bc-button:hover {
+	border-color: #000;
+	box-shadow: 1px 1px 2px #333;
+}
+#braincontrol #page-accounts .account .actions a,
+#braincontrol #page-contacts .contact .actions a {
+	display: inline-block;
+	position: relative;
+	font-size: 18px;
+	width: 36%;
+	margin: 0 0 0 1%;
+	border-color: #333;
+	box-shadow: 1px 1px 2px #111;
+	text-align: center;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+#braincontrol #page-accounts .account .actions a:first-child,
+#braincontrol #page-contacts .contact .actions a:first-child {
+	margin-left: 0%;
+}
+#braincontrol #page-accounts .account .actions a:last-child,
+#braincontrol #page-contacts .contact .actions a:last-child {
+	width: 22%;
+}
+
+/*
+
+DASHBAORD
+
+*/
+#braincontrol-holder #page-markets .stat {
+	display: inline-block;
+	position: relative;
+	background: #444;
+	border: 1px solid #000;
+	padding: 10px 0;
+	text-align: center;
+	margin: 10px 1% 0;
+	width: 47%;
+	overflow: hidden;
+	vertical-align: top;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px #222;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+#braincontrol-holder #page-markets .stat .figure {
+	display: block;
+	font-family: exo, sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 30px;
+	color: #FFF;
+	display: block;
+	position: relative;
+	top: 50%;
+	margin-top: -30px;
+}
+#braincontrol-holder #page-markets .stat .fact {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	top: 50%;
+	margin-top: 5px;
+	color: #FFFF79;
+	font-size: 11px;
+}
+
+/*
+
+BUTTONS
+
+*/
+#braincontrol form.bc-form input.bc-button,
+#braincontrol .bc-button {
+	font-family: dev, sans-serif;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	vertical-align: top;
+	padding: 6px 12px;
+	background: #EEE;
+	color: #09C;
+	font-size: 18px;
+	margin: 0 auto 5px;
+	text-transform: uppercase;
+	border: 1px solid #CCC;
+	box-shadow: 1px 1px 2px #999;
+	border-radius: 6px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+#braincontrol .bc-button:hover {
+	background: #DDD;
+	color: #069;
+	border: 1px solid #BBB;
+	box-shadow: 1px 1px 2px #333;
+}
+#braincontrol form.bc-form input.bc-primary,
+#braincontrol .bc-button.bc-primary {
+	color: #FFF;
+}
+#braincontrol form.bc-form input.bc-primary:hover,
+#braincontrol .bc-button.bc-primary:hover {
+	color: #FFFFCC;
+}
+#braincontrol .bc-button.bc-danger {
+	color: #FFF;
+}
+#braincontrol .bc-button.bc-danger:hover {
+	color: #FFFFCC;
+}
+#braincontrol .bc-button.bc-icon {
+	padding-right: 42px;
+}
+#braincontrol .bc-button.bc-icon:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 32px;
+	top: -1px;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	border: 1px solid #CCC;
+	border-radius: 0 6px 6px 0;
+}
+#braincontrol-holder #page-accounts .bc-button.bc-icon:after,
+#braincontrol-holder #page-contacts .bc-button.bc-icon:after {
+	border-color: #000;
+}
+#braincontrol .bc-button.bc-icon i.fa {
+	display: block;
+	width: 30px;
+	top: 6px;
+	right: 2px;
+	height: 30px;
+	font-size: 20px;
+	line-height: 20px;
+	position: absolute;
+	color: #757575;
+	z-index: 9999;
+}
+#braincontrol .bc-button.bc-half {
+	display: inline-block;
+	width: 48%;
+	margin-left: 2%;
+}
+#braincontrol .bc-button.bc-half:first-child {
+	margin-left: 0;
+}
+#braincontrol .bc-button.bc-small {
+	font-size: 17px;
+	padding: 4px 10px;
+}
+#braincontrol input.qr-scan {
+	display: none;
+}
+
+/*
+
+QR CODES
+
+*/
+#braincontrol #step-qr-accounts .qr_code,
+#braincontrol #step-qr-backups .qr_code,
+#braincontrol #step-qr-contacts .qr_code,
+#braincontrol #step-qr-accounts .bc-button,
+#braincontrol #step-qr-backups .bc-button,
+#braincontrol #step-qr-contacts .bc-button,
+#braincontrol #step-qr-accounts .qr_code img,
+#braincontrol #step-qr-backups .qr_code img,
+#braincontrol #step-qr-contacts .qr_code img {
+	text-align: center;
+}
+#braincontrol #step-qr-accounts .qr_code img,
+#braincontrol #step-qr-backups .qr_code img,
+#braincontrol #step-qr-contacts .qr_code img {
+	width: 260px;
+	height: 260px;
+}
+#braincontrol #step-qr-accounts .qr_code_title,
+#braincontrol #step-qr-backups .qr_code_title,
+#braincontrol #step-qr-contacts .qr_code_title {
+	word-wrap: break-word;
+	padding: 5px;
+	margin: 5px auto;
+	font-size: 13px;
+}
+#braincontrol #step-qr-accounts .bc-button,
+#braincontrol #step-qr-backups .bc-button,
+#braincontrol #step-qr-contacts .bc-button {
+	height: 34px;
+	margin: 5px 0;
+	width: 260px;
+}
+#braincontrol #step-qr-accounts .qr_code,
+#braincontrol #step-qr-backups .qr_code,
+#braincontrol #step-qr-contacts .qr_code {
+	width: 100%;
+}
+
+/*
+
+GRADIENTS
+
+*/
+#braincontrol .bc-button,
+#braincontrol .bc-button.bc-primary:after,
+#braincontrol .bc-button.bc-action:after {
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e1e1e1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e1e1e1));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#e1e1e1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1',GradientType=0 );
+}
+#braincontrol .bc-button:hover {
+	background: #e1e1e1;
+	background: -moz-linear-gradient(top,  #e1e1e1 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1e1e1), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  #e1e1e1 0%,#ffffff 100%);
+	background: -o-linear-gradient(top,  #e1e1e1 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  #e1e1e1 0%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #e1e1e1 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e1e1', endColorstr='#ffffff',GradientType=0 );
+}
+#braincontrol form.bc-form input.bc-primary,
+#braincontrol .bc-primary {
+	background: #0099ff;
+	background: -moz-linear-gradient(top,  #0099ff 0%, #0099cc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0099ff), color-stop(100%,#0099cc));
+	background: -webkit-linear-gradient(top,  #0099ff 0%,#0099cc 100%);
+	background: -o-linear-gradient(top,  #0099ff 0%,#0099cc 100%);
+	background: -ms-linear-gradient(top,  #0099ff 0%,#0099cc 100%);
+	background: linear-gradient(to bottom,  #0099ff 0%,#0099cc 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099ff', endColorstr='#0099cc',GradientType=0 );
+}
+#braincontrol .bc-button.bc-primary:hover {
+	background: #0099cc;
+	background: -moz-linear-gradient(top,  #0099cc 0%, #0099ff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0099cc), color-stop(100%,#0099ff));
+	background: -webkit-linear-gradient(top,  #0099cc 0%,#0099ff 100%);
+	background: -o-linear-gradient(top,  #0099cc 0%,#0099ff 100%);
+	background: -ms-linear-gradient(top,  #0099cc 0%,#0099ff 100%);
+	background: linear-gradient(to bottom,  #0099cc 0%,#0099ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099cc', endColorstr='#0099ff',GradientType=0 );
+}
+#braincontrol .bc-action {
+	background: #ffffcc;
+	background: -moz-linear-gradient(top,  #ffffcc 0%, #ffff33 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(100%,#ffff33));
+	background: -webkit-linear-gradient(top,  #ffffcc 0%,#ffff33 100%);
+	background: -o-linear-gradient(top,  #ffffcc 0%,#ffff33 100%);
+	background: -ms-linear-gradient(top,  #ffffcc 0%,#ffff33 100%);
+	background: linear-gradient(to bottom,  #ffffcc 0%,#ffff33 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#ffff33',GradientType=0 );
+}
+#braincontrol .bc-button.bc-action:hover {
+	background: #ffff33;
+	background: -moz-linear-gradient(top,  #ffff33 0%, #ffffcc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff33), color-stop(100%,#ffffcc));
+	background: -webkit-linear-gradient(top,  #ffff33 0%,#ffffcc 100%);
+	background: -o-linear-gradient(top,  #ffff33 0%,#ffffcc 100%);
+	background: -ms-linear-gradient(top,  #ffff33 0%,#ffffcc 100%);
+	background: linear-gradient(to bottom,  #ffff33 0%,#ffffcc 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff33', endColorstr='#ffffcc',GradientType=0 );
+}
+#braincontrol .bc-danger {
+	background: #a90329;
+	background: -moz-linear-gradient(top,  #a90329 0%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top,  #a90329 0%,#6d0019 100%);
+	background: -o-linear-gradient(top,  #a90329 0%,#6d0019 100%);
+	background: -ms-linear-gradient(top,  #a90329 0%,#6d0019 100%);
+	background: linear-gradient(to bottom,  #a90329 0%,#6d0019 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+}
+#braincontrol .bc-danger.bc-button:hover {
+	background: #6d0019;
+	background: -moz-linear-gradient(top,  #6d0019 0%, #a90329 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(100%,#a90329));
+	background: -webkit-linear-gradient(top,  #6d0019 0%,#a90329 100%);
+	background: -o-linear-gradient(top,  #6d0019 0%,#a90329 100%);
+	background: -ms-linear-gradient(top,  #6d0019 0%,#a90329 100%);
+	background: linear-gradient(to bottom,  #6d0019 0%,#a90329 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#a90329',GradientType=0 );
+}

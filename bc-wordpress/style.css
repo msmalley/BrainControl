@@ -1,0 +1,21 @@
+/*
+Theme Name: BrainControl
+Theme URI: http://braincontrol.me
+Author: BrainControl
+Author URI: http://braincontrol.me
+Description: A self-hosted Bitcoin wallet or a snazzy way to showcase your own mobile Apps? The choice is yours...
+Version: 1.0
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Tags: bitcoin, responsive, mobile-friendly
+Text Domain: braincontrol
+
+Conclusions continually conscious, decisions deluding, but why...?
+*/
+@import url('css/resets.css');
+@import url('css/site/styles.css');
+@import url('css/site/responsiveness.css');
+@import url('css/fonts.css');
+@import url('css/panels.css');
+@import url('css/app.css');
+@import url('css/site/rereset.css');

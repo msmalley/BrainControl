@@ -1,0 +1,385 @@
+{{#panels}}
+	<div class="bc-panel" id="{{id}}">
+
+		{{#top}}
+		<div class="step-top">
+
+			{{#text}}
+				<h2 class="fancy-title">
+					{{{text}}}
+					{{#close}}
+						<a href="#" class="fa fa-times-circle bc-slide" {{#direction}}data-direction="{{direction}}"{{/direction}}{{^direction}}data-direction="right"{{/direction}} {{#id}}data-id="{{id}}"{{/id}}{{^id}}data-id="step-setup"{{/id}}></a>
+					{{/close}}
+				</h2>
+			{{/text}}
+			{{^text}}
+
+				{{#buttons}}
+
+					<a href="{{href}}" class="bc-button {{classes}}" {{#direction}}data-direction="{{direction}}"{{/direction}} {{#id}}data-id="{{id}}"{{/id}}>
+						{{text}}
+						{{#icon}}<i class="fa fa-{{icon}}"></i>{{/icon}}
+					</a>
+
+					{{#after}}
+						<span class="bc-warn">{{{after}}}</span>
+					{{/after}}
+
+				{{/buttons}}
+
+			{{/text}}
+
+		</div>
+		{{/top}}
+
+		{{#middle}}
+		<div class="step-middle">
+
+			{{#paragraphs}}
+
+				<p class="{{classes}}">{{{text}}}</p>
+
+			{{/paragraphs}}
+			{{^paragraphs}}
+
+				{{#icon}}
+					<i class="fa fa-{{icon}}"></i>
+				{{/icon}}
+
+				{{#warning}}
+					<p class="bc-warn">{{{warning}}}</p>
+				{{/warning}}
+				{{#text}}
+					<p class="unessential">{{{text}}}</p>
+				{{/text}}
+
+			{{/paragraphs}}
+
+			<form class="bc-form">
+			{{#form}}
+
+				{{#paragraph}}
+					<p class="{{classes}}">{{{text}}}</p>
+				{{/paragraph}}
+
+				{{#type}}
+					<div class="form-group">
+						{{#label}}
+							<label for="{{id}}">{{label}}</label>
+							{{#icon}}
+								<i class="fa fa-{{icon}}"></i>
+							{{/icon}}
+						{{/label}}
+						<input id="{{id}}" type="{{type}}" class="{{classes}}" value="{{value}}" placeholder="{{placeholder}}" autocomplete="off" {{#readonly}}readonly="readonly"{{/readonly}} />
+					</div>
+				{{/type}}
+				{{^type}}
+					{{#textarea}}
+						{{#label}}
+							<label for="{{id}}" class="full">{{label}}</label>
+						{{/label}}
+						<textarea id="{{id}}" class="{{classes}}" {{#readonly}}readonly="readonly"{{/readonly}}>{{value}}</textarea>
+					{{/textarea}}
+					{{^textarea}}
+						<input id="{{id}}" class="{{classes}}" type="hidden" value="{{value}}" />
+					{{/textarea}}
+				{{/type}}
+
+			{{/form}}
+			</form>
+
+		</div>
+		{{/middle}}
+
+		{{#bottom}}
+		<div class="step-bottom">
+
+			{{#text}}
+				<p>{{{text}}}</p>
+			{{/text}}
+			{{^text}}
+
+				{{#buttons}}
+
+					<a href="{{href}}" class="bc-button {{classes}}" {{#direction}}data-direction="{{direction}}"{{/direction}} {{#id}}data-id="{{id}}"{{/id}}  {{#back_direction}}data-back-direction="{{back_direction}}"{{/back_direction}} {{#back_id}}data-back-id="{{back_id}}"{{/back_id}}>
+						{{{text}}}
+						{{#icon}}<i class="fa fa-{{icon}}"></i>{{/icon}}
+					</a>
+
+					{{#after}}
+						<span class="bc-warn">{{{after}}}</span>
+					{{/after}}
+
+				{{/buttons}}
+
+			{{/text}}
+
+		</div>
+		{{/bottom}}
+
+	</div>
+{{/panels}}
+
+<div class="bc-panel" id="step-profile">
+	<div class="step-top">
+		<h2 class="fancy-title">
+			{{{ux.profile.title}}}
+			<a href="#" class="fa fa-times-circle bc-slide" data-id="page-markets"></a>
+		</h2>
+	</div>
+	<div class="step-middle">
+		<a href="#" class="bc-button bc-block bc-primary qr-scan-scanner" id="qr-scan-code">{{ux.buttons.scan}}</a><br />
+		<a href="#" class="bc-button bc-block bc-action bc-slide" id="bc-import-keys" data-direction="up" data-id="step-import">{{ux.buttons.import_keys}}</a><br />
+		<a href="#" class="bc-button bc-block bc-action bc-slide" id="bc-recover-account" data-direction="up" data-id="step-recover">{{ux.buttons.recover}}</a><br />
+		<a href="#" class="bc-button bc-block bc-danger" id="bc-reset-device">{{ux.buttons.reset}}</a>
+		<input class="qr-scan" type="file" accept="image/*;capture=camera">
+	</div>
+</div>
+
+<div class="bc-panel" id="step-pin">
+	<div class="step-top">
+		<h2 class="fancy-title">
+			{{{ux.pin.title}}}
+			<a href="#" class="fa fa-times-circle bc-slide" data-direction="up" data-id="step-id"></a>
+		</h2>
+	</div>
+	<div class="step-middle">
+		<p class="unessential">{{ux.pin.intro}}</p>
+		<form class="bc-form">
+			<div class="form-group">
+				<input type="number" class="label-less" readonly="readonly" />
+				<input type="hidden" id="" readonly="readonly" />
+			</div>
+			<ul class="keypad">
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li class="info"><a href="#">Del</a></li>
+				<li><a href="#">0</a></li>
+				<li class="info"><a href="#">OK</a></li>
+			</ul>
+		</form>
+	</div>
+</div>
+
+<div class="bc-panel" id="step-calculator">
+	<div class="step-top">
+		<h2 class="fancy-title">
+			{{{ux.calculator.title}}}
+			<a href="#" class="fa fa-times-circle bc-slide" data-id="page-markets"></a>
+		</h2>
+	</div>
+	<div class="step-middle">
+		<form class="bc-form" id="bc-calculator">
+			<div class="form-group">
+				<input type="number" class="label-less" id="usd-to-btc" placeholder="{{ux.calculator.placeholder}}" readonly="readonly" />
+				<input type="hidden" id="" readonly="readonly" />
+			</div>
+			<ul class="keypad calculator">
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li class="info"><a href="#">+</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li class="info"><a href="#">-</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li class="info"><a href="#">.</a></li>
+				<li class="info"><a href="#">Del</a></li>
+				<li><a href="#">0</a></li>
+				<li class="info"><a href="#">BTC</a></li>
+				<li class="enter"><a href="#">ENT</a></li>
+			</ul>
+		</form>
+	</div>
+</div>
+
+<div class="bc-panel" id="step-qr-accounts">
+	<div class="step-top">
+		<h2 class="fancy-title">
+			{{{ux.qr.title}}}
+			<a href="#" class="fa fa-times-circle bc-slide" data-id="page-accounts"></a>
+			<a href="#" class="fa fa-print"></a>
+		</h2>
+	</div>
+	<div class="step-middle">
+		<h6 class="qr_code_title">{{ux.qr.h6}}</h6>
+		<div class="qr_code"></div>
+		<br /><a href="#" class="bc-button bc-action print-key" data-id="step-qr-accounts">{{ux.buttons.print_address}}</a>
+	</div>
+</div>
+
+<div class="bc-panel" id="step-qr-contacts">
+	<div class="step-top">
+		<h2 class="fancy-title">
+			{{{ux.qr.title}}}
+			<a href="#" class="fa fa-times-circle bc-slide" data-id="page-contacts"></a>
+			<a href="#" class="fa fa-print"></a>
+		</h2>
+	</div>
+	<div class="step-middle">
+		<h6 class="qr_code_title">{{ux.qr.h6}}</h6>
+		<div class="qr_code"></div>
+		<br /><a href="#" class="bc-button bc-action print-key" data-id="step-qr-contacts">{{ux.buttons.print_address}}</a>
+	</div>
+</div>
+
+<div class="bc-panel" id="step-qr-backups">
+	<div class="step-top">
+		<h2 class="fancy-title">
+			{{{ux.qr.title}}}
+			<a href="#" class="fa fa-times-circle bc-slide" data-id="page-accounts"></a>
+			<a href="#" class="fa fa-print"></a>
+		</h2>
+	</div>
+	<div class="step-middle">
+		<h6 class="qr_code_title unessential">{{ux.qr.h6}}</h6>
+		<div class="qr_code"></div>
+		<br /><a href="#" class="bc-button bc-action print-key" data-id="step-qr-backups">{{ux.buttons.print_key}}</a>
+	</div>
+</div>
+
+<div id="braincontrol-holder">
+	<div id="header">
+		{{#app.header.left}}
+			<a href="{{href}}" class="bc-slide" data-direction="{{direction}}" data-id="{{id}}"><i class="fa fa-{{icon}}"></i></a>
+		{{/app.header.left}}
+			<h1 class="app-title">{{{app.header.title}}}</h1>
+		{{#app.header.right}}
+			<a href="{{href}}" class="bc-slide" data-direction="{{direction}}" data-id="{{id}}"><i class="fa fa-{{icon}}"></i></a>
+		{{/app.header.right}}
+	</div>
+	<div id="pages">
+
+		<div class="page active" id="page-markets">
+
+			{{#stats}}
+			<div id="{{id}}" class="stat {{classes}}">
+				<span class="figure">{{figure}}</span>
+				<span class="fact">{{fact}}</span>
+			</div>
+			{{/stats}}
+
+		</div>
+		
+		<div class="page" id="page-accounts">
+
+			<div class="account">
+				<a href="#" id="bc-new-wallet" class="bc-button bc-block bc-primary bc-icon bc-slide" data-direction="down" data-id="step-new" data-back-id="page-accounts">{{ux.buttons.new_in}}<i class="fa fa-plus-circle"></i></a>
+			</div>
+
+			{{#accounts}}
+			<div class="account" id="account-{{username}}">
+
+				<h4 class="label">
+					{{label}}
+					<span class="currency"><span class="btc" data-address="{{address}}" data-username="{{username}}">{{btc}}</span> BTC</span>
+				</h4>
+
+				<input type="text" class="fake-input" value="{{address}}" onkeydown="event.preventDefault();event.stopPropagation();return false;" oncut="event.preventDefault();event.stopPropagation();return false;" />
+				
+				<div class="actions">
+					<a href="#" class="bc-button bc-action bc-small bc-account-backup" data-address="{{address}}" data-username="{{username}}">{{ux.buttons.backup}}</a>
+					<a href="#" class="bc-button bc-danger bc-small bc-account-clear" data-address="{{address}}" data-username="{{username}}">{{ux.buttons.clear}}</a>
+					<a href="#" class="bc-button bc-primary bc-small bc-account-qr bc-slide" data-direction="down" data-id="step-qr-accounts" data-address="{{address}}">{{ux.buttons.qr}}</a>
+				</div>
+
+			</div>
+			{{/accounts}}
+
+		</div>
+
+		<div class="page" id="page-send">
+
+			<form class="bc-form" id="send-payment">
+				{{#forms.send}}
+
+					{{#paragraph}}
+						<p class="{{classes}}">{{{text}}}</p>
+					{{/paragraph}}
+					
+					{{#type}}
+						<div class="form-group">
+							{{#label}}
+								<label for="{{id}}">{{label}}</label>
+							{{/label}}
+							<input id="{{id}}" type="{{type}}" class="{{classes}}" value="{{value}}" placeholder="{{placeholder}}" />
+							{{#icon}}
+								<a href="{{href}}" class="icon-wrapper" id="{{id}}"><i class="fa fa-bc-{{img}}"></i></a>
+								<select id="select-{{id}}" class="hidden-select" style="display: none;">
+									{{#options}}
+									<option value="{{value}}">{{text}}</option>
+									{{/options}}
+								</select>
+							{{/icon}}
+						</div>
+					{{/type}}
+					{{^type}}
+						{{#select}}
+							<div class="form-group select">
+								{{#label}}
+									<label for="{{id}}">{{label}}</label>
+								{{/label}}
+								<select id="{{id}}" class="{{classes}}" autocomplete="off">
+									{{#options}}
+										<option value="{{v}}">{{t}}</option>
+									{{/options}}
+								</select>
+							</div>
+						{{/select}}
+						{{^select}}
+							<input id="{{id}}" class="{{classes}}" type="hidden" value="{{value}}" />
+						{{/select}}
+					{{/type}}
+
+				{{/forms.send}}
+			</form>
+
+		</div>
+
+		<div class="page" id="page-contacts">
+
+			<div class="contact">
+				<a href="#" id="bc-new-contact" class="bc-button bc-block bc-primary bc-icon bc-slide" data-direction="down" data-id="step-contact" data-back-id="page-contacts">{{ux.buttons.new_contact}}<i class="fa fa-plus-circle"></i></a>
+			</div>
+
+			{{#contacts}}
+			<div class="contact" id="account-{{username}}">
+
+				<h4 class="label with-notes">
+					{{name}}
+					<a href="#" class="bc-contact-notes bc-slide {{^extras}}empty{{/extras}}" data-direction="down" data-id="step-note" data-username="{{username}}">{{ux.buttons.notes}}</a>
+				</h4>
+
+				<input type="text" class="fake-input" value="{{address}}" onkeydown="event.preventDefault();event.stopPropagation();return false;" oncut="event.preventDefault();event.stopPropagation();return false;" />
+
+				<div class="actions">
+					<a href="#" class="bc-button bc-action bc-small bc-contact-send" data-address="{{address}}" data-username="{{username}}">{{ux.buttons.send}}</a>
+					<a href="#" class="bc-button bc-danger bc-small bc-contact-clear" data-username="{{username}}" data-address="{{address}}">{{ux.buttons.clear}}</a>
+					<a href="#" class="bc-button bc-primary bc-small bc-contact-qr bc-slide" data-direction="down" data-id="step-qr-contacts" data-address="{{address}}">{{ux.buttons.qr}}</a>
+				</div>
+
+			</div>
+			{{/contacts}}
+
+		</div>
+
+	</div>
+	<nav id="navigation">
+		{{#app.nav}}
+		<a href="{{href}}" class="{{classes}}" data-id="{{id}}">
+			<i class="fa fa-{{icon}}"></i><br />
+			{{text}}
+		</a>
+		{{/app.nav}}
+	</nav>
+</div>

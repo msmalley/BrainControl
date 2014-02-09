@@ -1,0 +1,17 @@
+{
+  "version" : "0.1",
+  "name": "BrainControl",
+  "type": "privileged",
+  "description": "An HTML5 Bitcoin Wallet",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/img/icon-60.png",
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "BrainControl",
+    "url": "http://braincontrol.me"
+  },
+  "default_locale": "en",
+  "fullscreen": "true"
+}

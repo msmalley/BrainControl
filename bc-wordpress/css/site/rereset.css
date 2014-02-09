@@ -1,0 +1,52 @@
+#main-content #braincontrol {
+	overflow: hidden;
+}
+#main-content #braincontrol #header {
+	position: absolute;
+}
+
+#main-content #braincontrol .bc-panel .step-middle {
+	padding: 5px 20px;
+}
+
+#main-content #braincontrol #step-qr-accounts .qr_code_title,
+#main-content #braincontrol #step-qr-backups .qr_code_title,
+#main-content #braincontrol #step-qr-contacts .qr_code_title {
+	font-size: 9px;
+	padding: 5px 0;
+}
+
+#main-content #braincontrol .form-group {
+	margin-bottom: 0;
+}
+
+#main-content #braincontrol .bc-button.bc-icon:after {
+	height: auto;
+	bottom: -1px;
+}
+
+#main-content #braincontrol p {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+/* DUE TO BOX-RESIZE */
+#main-content #braincontrol .bc-panel .step-top,
+#main-content #braincontrol .bc-panel .step-bottom,
+#main-content #braincontrol #pages .page {
+	width: 100%;
+}
+
+#main-content #braincontrol #page-accounts .account .fake-input,
+#main-content #braincontrol #page-contacts .contact .fake-input {
+	margin: 10px 0;
+}
+
+#main-content #braincontrol #page-accounts .account h4,
+#main-content #braincontrol #page-contacts .contact h4 {
+	display: block;
+	margin: 0;
+}
+#main-content #braincontrol #page-contacts .contact h4 a.bc-contact-notes,
+#main-content #braincontrol #page-accounts .account h4 span.currency {
+	margin-top: -11px;
+}

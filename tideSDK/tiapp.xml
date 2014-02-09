@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:app xmlns:ti='http://ti.appcelerator.org'>
+<!-- These values are edited/maintained by TideSDK Developer -->
+<id>braincontrol</id>
+<name>BrainControl</name>
+<version>0.1</version>
+<publisher>BrainControl</publisher>
+<url>http://braincontrol.me</url>
+<icon>apple-touch-icon.png</icon>
+<copyright>2014 by BrainControl - MIT License</copyright>
+<!-- Window Definition - these values can be edited -->
+<window>
+<id>initial</id>
+<title>BrainControl</title>
+<url>app://index.html</url>
+<width>880</width>
+<max-width>3000</max-width>
+<min-width>300</min-width>
+<height>620</height>
+<max-height>620</max-height>
+<min-height>620</min-height>
+<fullscreen>false</fullscreen>
+<resizable>true</resizable>
+<chrome scrollbars="true">true</chrome>
+<maximizable>false</maximizable>
+<minimizable>true</minimizable>
+<closeable>true</closeable>
+</window>
+</ti:app>

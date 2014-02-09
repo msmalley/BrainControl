@@ -1,0 +1,10 @@
+@import url('fonts.css');
+@import url('resets.css');
+@import url('panels.css');
+@import url('app.css');
+
+#braincontrol #step-qr-accounts .qr_code_title,
+#braincontrol #step-qr-backups .qr_code_title,
+#braincontrol #step-qr-contacts .qr_code_title {
+	max-width: 280px;
+}

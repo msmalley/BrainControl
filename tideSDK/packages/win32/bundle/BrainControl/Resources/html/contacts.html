@@ -1,0 +1,16 @@
+<div class="contact bc-via-ajax" id="account-{{username}}">
+
+	<h4 class="label with-notes">
+		{{name}}
+		<a href="#" class="bc-contact-notes bc-slide {{^extras}}empty{{/extras}}" data-direction="down" data-id="step-note" data-username="{{username}}">{{button_notes}}</a>
+	</h4>
+
+	<input type="text" class="fake-input" value="{{address}}" onkeydown="event.preventDefault();event.stopPropagation();return false;" oncut="event.preventDefault();event.stopPropagation();return false;" />
+
+	<div class="actions">
+		<a href="#" class="bc-button bc-action bc-small bc-contact-send" data-address="{{address}}" data-username="{{username}}">{{button_send}}</a>
+		<a href="#" class="bc-button bc-danger bc-small bc-contact-clear" data-username="{{username}}" data-address="{{address}}">{{button_clear}}</a>
+		<a href="#" class="bc-button bc-primary bc-small bc-contact-qr bc-slide" data-direction="down" data-id="step-qr-contacts" data-address="{{address}}">{{button_qr}}</a>
+	</div>
+
+</div>

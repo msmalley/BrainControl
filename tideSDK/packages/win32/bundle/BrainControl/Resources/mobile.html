@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>BrainControl</title>
+
+<link id='css-less' href='css/braincontrol-minimal.css' rel='stylesheet'>
+<script src='js/basket.js'></script>
+
+<style>
+
+body {
+	display: block;
+	position: relative;
+	width: 320px;
+	background: #333;
+	border: 1px solid #AAA;
+	margin: 30px auto;
+	overflow: hidden;
+	height: 480px;
+	height: 372px;
+}
+#braincontrol #header,
+#braincontrol #navigation {
+	position: absolute;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="braincontrol"></div>
+
+<!-- DEVELOPMENT VERSION -->
+<script src='js/base.js'></script>
+<script src='js/config.js'></script>
+<script src='js/blockchain.js'></script>
+<script src='js/btc.js'></script>
+<script src='js/buttons.js'></script>
+<script src='js/braincontrol.js'></script>
+<script>
+var reset = true;
+if(reset)
+{
+	// THIS MERELY CLEARS THE CACHE
+	basket
+	.remove('js/base.js')
+	.remove('js/config.js')
+	.remove('js/blockchain.js')
+	.remove('js/btc.js')
+	.remove('js/buttons.js')
+	.remove('js/braincontrol.js');
+}
+basket.require(
+    { url: 'js/jquery-2.0.3.min.js' },
+    { url: 'js/transition.js' },
+    { url: 'js/mustache.js' },
+    { url: 'js/crypto.js' },
+    { url: 'js/bitcoinjs.js' },
+    { url: 'js/qrcode.js' }).then(function()
+	{
+		if(reset)
+		{
+			base.set('templates', null);
+			// THIS MERELY CLEARS THE CACHE
+		}
+		var settings = braincontrol.start(config.defaults());
+		var wrapper = $('#'+settings.id);
+		if($(wrapper).length > 0)
+		{
+			braincontrol.setup(settings);
+		}
+		else
+		{
+			base.alert(base.lang('Cannot find associated ID'));
+		}
+	}
+);
+</script>
+
+</body>
+</html>
