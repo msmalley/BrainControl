@@ -23,7 +23,7 @@ Downloads compiled as ZIP files for the following platforms:
 * MacOSX - [downloads/bc-macosx.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-macosx.zip)
 
 For a more technical look behind the scenes and at what is to come, please see this
-[technical blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).
+[blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).
 
 Follow us on [Twitter](http://twitter.com/braincontrolme) for more updates.
 
