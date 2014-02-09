@@ -18,16 +18,16 @@ This repository contains several components, including:
 
 Download compiled ZIP files for the following platforms:
 
-* WordPress [downloads/bc-wordpress.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-wordpress.zip)
-* Windows [downloads/bc-windows.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-windows.zip)
-* MacOSX [downloads/bc-macosx.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-macosx.zip)
+* WordPress - [downloads/bc-wordpress.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-wordpress.zip)
+* Windows - [downloads/bc-windows.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-windows.zip)
+* MacOSX - [downloads/bc-macosx.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-macosx.zip)
 
-Learn more at [BrainControl.me](http://braincontrol.me) or for a more technical
-look behind the scenes and at what is to come, please see [this blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol)
+For a more technical look behind the scenes and at what is to come, please see this
+[technical blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).
 
 Follow us on [Twitter](http://twitter.com/braincontrolme) for more updates.
 
-Please view [todo.md](https://github.com/msmalley/BrainControl/todo.md) for a full break-down of what is left to be done...
+Please view [todo.md](https://github.com/msmalley/BrainControl/master/tree/todo.md) for a full break-down of what is left to be done...
 
 #### Current JS Dependencies (Not Mine but Included)
 
