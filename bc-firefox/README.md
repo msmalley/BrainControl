@@ -24,9 +24,10 @@ This repository contains several components, including:
 
 Download compiled ZIP files for the following platforms:
 
-* WordPress - [downloads/bc-wordpress.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-wordpress.zip)
-* Windows - [downloads/bc-windows.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-windows.zip)
-* MacOSX - [downloads/bc-macosx.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-macosx.zip)
+* FirefoxOS - [https://github.com/msmalley/BrainControl-FirefoxOS/archive/master.zip](https://github.com/msmalley/BrainControl-FirefoxOS/archive/master.zip)
+* WordPress - [https://github.com/msmalley/BrainControl-WordPress/archive/master.zip](https://github.com/msmalley/BrainControl-WordPress/archive/master.zip)
+* Windows - [https://github.com/msmalley/BrainControl-Windows/archive/master.zip](https://github.com/msmalley/BrainControl-Windows/archive/master.zip)
+* MacOSX - [https://github.com/msmalley/BrainControl-MacOSX/archive/master.zip](https://github.com/msmalley/BrainControl-MacOSX/archive/master.zip)
 
 For a more technical look behind the scenes and at what is to come, please see this
 [technical blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).

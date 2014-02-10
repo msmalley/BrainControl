@@ -1,7 +1,7 @@
 # Welcome to BrainControl
 ### Storing and Sending Bitcoin from Your Brain!
 
-BrainControl is a 100% Browser-Based Bitcoin Wallet - [see live demo](http://braincontrol.me)
+BrainControl is a 100% Browser-Based Bitcoin Wallet.
 
 It requires a browser with HTML5 LocalStorage functionality, and uses inline
 JavaScript to generate and manage non-existent private keys using deterministic
@@ -16,16 +16,17 @@ This repository contains several components, including:
 * [MacOSX Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-macosx/)
 * [Windows Desktop Application](https://github.com/msmalley/BrainControl/tree/master/bc-windows/)
 
-Downloads compiled as ZIP files for the following platforms:
+Download compiled ZIP files for the following platforms:
 
-* WordPress - [downloads/bc-wordpress.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-wordpress.zip)
-* Windows - [downloads/bc-windows.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-windows.zip)
-* MacOSX - [downloads/bc-macosx.zip](https://github.com/msmalley/BrainControl/raw/master/downloads/bc-macosx.zip)
+* FirefoxOS - [https://github.com/msmalley/BrainControl-FirefoxOS/archive/master.zip](https://github.com/msmalley/BrainControl-FirefoxOS/archive/master.zip)
+* WordPress - [https://github.com/msmalley/BrainControl-WordPress/archive/master.zip](https://github.com/msmalley/BrainControl-WordPress/archive/master.zip)
+* Windows - [https://github.com/msmalley/BrainControl-Windows/archive/master.zip](https://github.com/msmalley/BrainControl-Windows/archive/master.zip)
+* MacOSX - [https://github.com/msmalley/BrainControl-MacOSX/archive/master.zip](https://github.com/msmalley/BrainControl-MacOSX/archive/master.zip)
 
 For a more technical look behind the scenes and at what is to come, please see this
-[blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).
+[technical blog post](http://betanomics.asia/blog/store-and-send-bitcoin-directly-from-your-brain-using-braincontrol).
 
-Follow us on [Twitter](http://twitter.com/braincontrolme) or [Facebook](https://www.facebook.com/groups/braincontrolme/) for more updates / support.
+Follow us on [Twitter](http://twitter.com/braincontrolme) for more updates.
 
 Please view [todo.md](https://github.com/msmalley/BrainControl/tree/master/todo.md) for a full break-down of what is left to be done...
 
