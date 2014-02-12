@@ -1,3 +1,11 @@
+var error_contacting_blockchain_info = false;
+var blockchain_info_timeout_callback = function()
+{
+	error_contacting_blockchain_info = false;
+	window.clearInterval(blockchain_info_timeout);
+}
+var blockchain_info_timeout;
+
 blockchain = new function(){
 
 	this.balance = function(address, callback)
@@ -19,6 +27,16 @@ blockchain = new function(){
 			success: function(results)
 			{
 				callback(results);
+			},
+			error: function(results)
+			{
+				braincontrol.unload();
+				if(!error_contacting_blockchain_info || func == 'addressbalance')
+				{
+					error_contacting_blockchain_info = true;
+					blockchain_info_timeout = setInterval(function(){blockchain_info_timeout_callback()},30000); // Every 30 Seconds
+					alert(base.lang('Error contacting BlockChain.info - Account Balances and Market Conditions are Currently Unavailable.'));
+				}
 			}
 		})
 	}
@@ -42,7 +60,7 @@ blockchain = new function(){
 				{
 					blockchain.balance(address, function(results)
 					{
-						var balance = parseFloat(results / 10000000);
+						var balance = parseFloat(results / 100000000);
 						$(span).text(balance);
 						accounts[username].btc = balance;
 						accounts[username].ts = now;
